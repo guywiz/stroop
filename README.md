@@ -30,7 +30,7 @@ Il est recommandé de créer un environnement dédié sous python 3.10 (par exem
 
 ou avec `venv`, au choix.
 
-Le fichier `requirements.txt` contient les dépendances (seules dash est inclus au fichier, qui déclenche l'installation d'un tas de librairies annexes nécessaires à `dash`).
+Le fichier `requirements.txt` contient les dépendances (seule dash est incluse, qui déclenche l'installation d'un tas de librairies annexes nécessaires à `dash`).
 
 Puis reste à lancer l'application depuis un terminal, et depuis le répertoire où se trouve le code source:
 
