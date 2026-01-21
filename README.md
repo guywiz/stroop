@@ -115,16 +115,16 @@ A venir, un calendrier prévisionnel pour cadrer la mise en place de l'expérien
 
 - L'analyse nécessite de mettre en oeuvre les quelques connaissances statistiques de l'atelier 2
   - Comprendre ce qu'est une distribution normale
-  - Comprendre ce qu'est un z-score et comment on l'utilise (pour le calcul de la $p$-value)
+  - Comprendre ce qu'est un $z$-score et comment on l'utilise (pour le calcul de la $p$-value)
   - Comprendre la formulation des hypothèses $H_0$ et $H_1$ en lien avec le but poursuivi
   - Comprendre les conditions particulières qui amène au test de Student
 - Savoir rapporter de la démarche suivie et des réulstats obtenus
 
 ### Regard critique sur la méthodologie
 
-On peut penser quand dans cerains cas, les équipes auront suivi des raccourcis par manque de temps, par exemple
+On peut penser quand dans certains cas, les équipes auront suivi des raccourcis par manque de temps, par exemple
 
-- Dans le cas d'un échantillon mal formé, il peut être intéressant de discuter de la validité de l'expérience ou des conclusiosn qui sont tirées. Pensons par exemple à des étudiants qui, à la bourre, décide de de prêter eux-mêmes à l'expérience à plusieurs reprises, ou encore de soumettre un même participant à l'expérience plusieurs fois, introduisant un biais d'apprentissage ...
+- Dans le cas d'un échantillon mal formé, il peut être intéressant de discuter de la validité de l'expérience ou des conclusions qui sont tirées. Pensons par exemple à des étudiants qui, à la bourre, décide de de prêter eux-mêmes à l'expérience à plusieurs reprises, ou encore de soumettre un même participant à l'expérience plusieurs fois, introduisant un biais d'apprentissage ...
 - Dans le cas de données erronées (mauvais déroulé de l'expérience à cause de mauvaise condition, disons), données bruitées, nécessité de filtrer, etc.
 - ...
 
