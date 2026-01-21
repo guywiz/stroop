@@ -40,7 +40,7 @@ avant de visualiser l'application dans le navigateur à l'URL:
 
 `http://127.0.0.1:8050/`.
 
-Les résultats de l'expérience sont pour l'instant ajouté à un fichier `/src/tmp.txt` (qui est créé au départ et auxquels toutes les mesures subséquentes s'jaoutent ensuite).
+Les résultats de l'expérience sont pour l'instant ajoutés à un fichier `/src/tmp.txt` (qui est créé au départ et auxquels toutes les mesures subséquentes s'jaoutent ensuite).
 
 ## Méthodologie
 
