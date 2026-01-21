@@ -91,13 +91,13 @@ Ainsi, si on calcule le $z$-score:
 
 $z = \frac{\bar X - \mu_X}{\sigma_X} = \frac{\bar X - \mu}{\frac{\sigma}{\sqrt{N}}}$
 
-on peut rejeter l'hypothèse nulle $H_0$ dès lors que $z$ est trop grand (on calcule la probabilité que $z$ soit au-delà de la moyenne d'au moins deux écart-type, typiquement).
+Sachant que les valeurs $z$ suivent elles aussi une distribution normale (de moyenne 0 et de variance 1), on peut rejeter l'hypothèse nulle $H_0$ dès lors que $z$ est trop grand (on calcule la probabilité que $z$ soit au-delà de la moyenne d'au moins deux écart-type, typiquement).
 
-Le problème est qu'on nbe connait pas la valeur $\sigma_X$. Nous pouvons en revanche l'estimer à partir des valeurs observées, en calculant
+Le problème est qu'on ne connait pas la valeur $\sigma_X$. Nous pouvons en revanche l'estimer à partir des valeurs observées, en calculant
 
 $s = \sqrt{\frac{\sum_i (x_i - \bar X)^2 }{N-1}}$
 
-mais il nous alors remplacer le $z$ score par le calcul d'un $t$-score
+mais il nous faut alors remplacer le $z$ score par le calcul d'un $t$-score
 
 $t = \frac{\bar X - \mu}{\frac{s}{\sqrt{N}}}$
 
