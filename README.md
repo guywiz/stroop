@@ -77,7 +77,7 @@ L'analyse des résultats consiste à établir si la moyenne observée (dont on a
 
 *Remarque*. (Ce type d'analyse rejoint le programme de l'atelier 2, en partie au moins).
 
-- On dispose d'un échantillon $X$ (de $N$ valeurs $x_1, x_2, \ldots, x_N$ des différences de temps de réaction entre les deux conditions expérimentales), qui permet de calculer une moyenne observée $\bar X$.
+- On dispose d'un échantillon $X$ (de $N$ valeurs $x_1, x_2, \ldots, x_N$ des différences de temps de réaction entre les deux conditions expérimentales), qui permet de calculer une moyenne observée $\overline X$.
 
 - La moyenne observée $\bar X$ est en quelque sorte la meillleure estimation que l'on ait de la moyenne $\mu$ sur la population (la "vraie" moyenne).
 
