@@ -24,7 +24,7 @@ Le code implémente pour l'instant une application web très simple:
 
 L'application utilise le [framework `dash`](https://dash.plotly.com/).
 
-Il est recommandé de créer un environnement dédié sous python 3.10 (par exemmple).
+Il est recommandé de créer un environnement dédié sous python 3.10 (par exemple).
 
 `conda create -n stroop python==3.10`
 
@@ -55,7 +55,7 @@ Une première tâche pour réaliser l'expérience est de recruter un échantillo
 
 Pour chacun des sujets, on considère différentes valeurs:
 
-- `mean_RT_congruent`, `mean_RT_incongruent` (sur les essais corrects, c'est-à-dire sans erreur),
+- `mean_RT_congruent`, `mean_RT_incongruent` (qui calcule le "mean reaction time" dans le cas de stimulis congruents ou incongruents sur les essais corrects, c'est-à-dire sans erreur),
 - `sd_RT_congruent`, `sd_RT_incongruent` (écart-type sur les valeurs retenues)
 
 On peut aussi considérer:
