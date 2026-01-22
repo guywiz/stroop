@@ -79,27 +79,27 @@ L'analyse des résultats consiste à établir si la moyenne observée (dont on a
 
 - On dispose d'un échantillon $X$ (de $N$ valeurs $x_1, x_2, \ldots, x_N$ des différences de temps de réaction entre les deux conditions expérimentales), qui permet de calculer une moyenne observée $\overline X$.
 
-- La moyenne observée $\bar X$ est en quelque sorte la meillleure estimation que l'on ait de la moyenne $\mu$ sur la population (la "vraie" moyenne).
+- La moyenne observée ${\overline X}$ est en quelque sorte la meillleure estimation que l'on ait de la moyenne $\mu$ sur la population (la "vraie" moyenne).
 
-- Or, la moyenne observée sur différents échantillons risquent fort de varier ... (en effet, si on considère un autre échantillon $X'$, on aura sans doute une autre valeur $\bar X' \not = \bar X$).
-  - Si on imagine l'ensemble de tous les échantillons posisbles, on pourrait alors calculer la moyenne entre tous ces échantillons, notons la $\mu_{\bar X}$.
-  - Fort heureusement, il se trouve que cette valeur coincide avec la moyenne, c'est-à-dire $\mu = \mu_{\bar X}$
-  - Et de plus, l'écart-type $\sigma_{\bar X}$ sur l'ensemble de tous les échantillons est lié à l'écart-type $\sigma$ sur la population
+- Or, la moyenne observée sur différents échantillons risquent fort de varier ... (en effet, si on considère un autre échantillon $X'$, on aura sans doute une autre valeur ${\overline X}' \not = {\overline X}$).
+  - Si on imagine l'ensemble de tous les échantillons posisbles, on pourrait alors calculer la moyenne entre tous ces échantillons, notons la $\mu_{{\overline X}}$.
+  - Fort heureusement, il se trouve que cette valeur coincide avec la moyenne, c'est-à-dire $\mu = \mu_{{\overline X}}$
+  - Et de plus, l'écart-type $\sigma_{{\overline X}}$ sur l'ensemble de tous les échantillons est lié à l'écart-type $\sigma$ sur la population
   - Mieux encore, la distribution des moyennes observées suit une loi normale (dès lors que les échantillons sont de taille au moins $N \geq 30$)
 
 Ainsi, si on calcule le $z$-score:
 
-$z = \frac{\bar X - \mu_X}{\sigma_X} = \frac{\bar X - \mu}{\frac{\sigma}{\sqrt{N}}}$
+$z = \frac{{\overline X} - \mu_X}{\sigma_X} = \frac{{\overline X} - \mu}{\frac{\sigma}{\sqrt{N}}}$
 
 Sachant que les valeurs $z$ suivent elles aussi une distribution normale (de moyenne 0 et de variance 1), on peut rejeter l'hypothèse nulle $H_0$ dès lors que $z$ est trop grand (on calcule la probabilité que $z$ soit au-delà de la moyenne d'au moins deux écart-type, typiquement).
 
 Le problème est qu'on ne connait pas la valeur $\sigma_X$. Nous pouvons en revanche l'estimer à partir des valeurs observées, en calculant
 
-$s = \sqrt{\frac{\sum_i (x_i - \bar X)^2 }{N-1}}$
+$s = \sqrt{\frac{\sum_i (x_i - {\overline X})^2 }{N-1}}$
 
 mais il nous faut alors remplacer le $z$ score par le calcul d'un $t$-score
 
-$t = \frac{\bar X - \mu}{\frac{s}{\sqrt{N}}}$
+$t = \frac{{\overline X} - \mu}{\frac{s}{\sqrt{N}}}$
 
 Or, la distribution de ce $t$-score n'est plus une distribution normale et on doit se référer à une autre distribution (et donc à d'autres tables, [comme celle-ci](./src/t-table.pdf)) pour déterminer si le score est suffisamment grand pour rejeter $H_0$
   - A noter que la distribution à utliser dépend aussi du degré de liberté de l'expérience (qui est égal à $N - 1$ où $N$ est la taille des échantilllons)
