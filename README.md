@@ -18,7 +18,7 @@ Le code implémente pour l'instant une application web très simple:
 
 - L'utilisateur clique et obtient l'affichage d'un mot,
 - Il clique ensuite sur un bouton indiquant la couleur du mot,
-- Le temps écoule entre l'affichage et le second clic est mesuré et stocké dans un fichier local.
+- Le temps écoulé entre l'affichage et le second clic est mesuré et stocké dans un fichier local.
 
 ### Installer et utiliser l'application
 
