@@ -70,7 +70,7 @@ On fait l'hypothèse de la normalité (de la distribution des valeurs),
 
 et on forme les hypothèses à tester:
 
-- $H_0$ (pas de différence entre stimulis congruents et stimulis incongruents), c'est-à-dire $\mu({\tt diff}) = 0$
+- $H_0$ (pas de différence entre stimulis congruents et stimulis incongruents), c'est-à-dire $\mu({\text diff}) = 0$
 - $H_1$ (différence entre les stimulis), c'est-à-dire $\mu({\tt diff}) > 0$
 
 L'analyse des résultats consiste à établir si la moyenne observée (dont on attend qu'elle soit supérieure à 0) est suffisamment grande pour conclure à une différence significative entre les deux conditions (congruence vs non congruence).
