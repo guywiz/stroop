@@ -84,7 +84,7 @@ L'analyse des résultats consiste à établir si la moyenne observée (dont on a
 - Or, la moyenne observée sur différents échantillons risquent fort de varier ... (en effet, si on considère un autre échantillon $X'$, on aura sans doute une autre valeur ${\overline X'} \not = {\overline X}$).
   - Si on imagine l'ensemble de tous les échantillons possibles, on pourrait alors calculer la moyenne (de toutes les moyennes ${\overline X}, {\overline X'}, \ldots$ de tous ces échantillons; notons la $\mu_{{\overline X}}$.
   - Fort heureusement, il se trouve que cette valeur coincide avec la moyenne, c'est-à-dire $\mu = \mu_{{\overline X}}$
-  - Et de plus, l'écart-type $\sigma_{{\overline X}}$ sur l'ensemble de tous les échantillons est lié à l'écart-type $\sigma$ sur la population
+  - Et de plus, l'écart-type $\sigma_{{\overline X}}$ sur l'ensemble de tous les échantillons est lié à l'écart-type $\sigma$ sur la population, plus précisément $\sigma_X = \frac{\sigma}{\sqrt{N}}$
   - Mieux encore, la distribution des moyennes observées suit une loi normale (dès lors que les échantillons sont de taille au moins $N \geq 30$)
 
 Ainsi, si on calcule le $z$-score:
