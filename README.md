@@ -87,7 +87,7 @@ L'analyse des résultats consiste à établir si la moyenne observée (dont on a
   - Et de plus, l'écart-type $\sigma_{{\overline X}}$ sur l'ensemble de tous les échantillons est lié à l'écart-type $\sigma$ sur la population, plus précisément $\sigma_X = \frac{\sigma}{\sqrt{N}}$
   - Mieux encore, la distribution des moyennes observées suit une loi normale (dès lors que les échantillons sont de taille au moins $N \geq 30$)
 
-Ainsi, si on calcule le $z$-score:
+Ainsi, on calcule le $z$-score:
 
 $z = \frac{{\overline X} - \mu_X}{\sigma_X} = \frac{{\overline X} - \mu}{\frac{\sigma}{\sqrt{N}}}$
 
@@ -101,7 +101,7 @@ mais il nous faut alors remplacer le $z$ score par le calcul d'un $t$-score
 
 $t = \frac{{\overline X} - \mu}{\frac{s}{\sqrt{N}}}$
 
-Or, la distribution de ce $t$-score n'est plus une distribution normale et on doit se référer à une autre distribution (et donc à d'autres tables, [comme celle-ci](./src/t-table.pdf)) pour déterminer si le score est suffisamment grand pour rejeter $H_0$
+Or, la distribution de ce $t$-score n'est plus une distribution normale et on doit se référer à une autre distribution (la distribution de Student, et donc à d'autres tables, [comme celle-ci](./src/t-table.pdf)) pour déterminer si le score est suffisamment grand pour rejeter $H_0$
   - A noter que la distribution à utliser dépend aussi du degré de liberté de l'expérience (qui est égal à $N - 1$ où $N$ est la taille des échantilllons)
 
 ## L'expérience de Stroop comme projet semestriel
