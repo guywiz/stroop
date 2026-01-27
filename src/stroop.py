@@ -16,7 +16,7 @@ displayed_word = None
 displayed_color = None
 start_time = None
 
-app = Dash(__name__)
+app = Dash(__name__, use_pages=True)
 
 app.layout = html.Div(
     style={"textAlign": "center", "fontFamily": "Arial", "marginTop": "50px"},
@@ -75,7 +75,7 @@ def check_answer(color1, color2, color3, color4, current_res):
 	correct_color = [k for k, v in COLORS.items() if v == displayed_color][0]
 
 	correct = (clicked_button == correct_color)
-	with open("./tmp.txt", "a") as fp:
+	with open("./results.txt", "a") as fp:
 		fp.write(f"Temps de reaction {reaction:.0f} ms\n")
 	print(f"Temps de reaction {reaction:.0f} ms")
 	return f"{'✔️' if correct else '❌'} Temps de réaction : {reaction:.0f} ms"
