@@ -32,9 +32,19 @@ ou avec `venv`, au choix.
 
 Le fichier `requirements.txt` contient les dépendances (seule dash est incluse, qui déclenche l'installation d'un tas de librairies annexes nécessaires à `dash`).
 
-Puis reste à lancer l'application depuis un terminal, et depuis le répertoire où se trouve le code source:
+Puis reste à lancer l'application depuis un terminal, et depuis le répertoire où se trouve le code source.
+
+Le dépôt contient deux applications, qui correspondent à deux variantes de l'expérience de Stroop.
+
+- La première expérience correspond à l'exemple classique. Il suffit dans ce cas de lancer le script:
 
 `> python stroop.py`
+
+La seconde variante, ***Stroop spatial***,  affiche à l'écran le mot "Gauche" ou "Droite" et l'utilisateur doit indiquer si celui-ci se trouve à gauche (en cliquant la touche "F") ou à droite (en cliquant la touche "J"). Le script est logé dans le dossier `stroop_left_right`, et se lance avec la commande:
+
+`> python app_stroop_left_right.py`
+
+Cette seconde version permet aussi de récolter des informations sur l'utilisateur, et affiche une page de fin.
 
 avant de visualiser l'application dans le navigateur à l'URL:
 
