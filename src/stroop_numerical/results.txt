@@ -1,0 +1,50 @@
+Filière Maths, age 20
+Filière Maths, age 20
+Filière Psy, age 10
+Filière Psy, age 10
+Filière Psy, age 10
+Filière Psy, age 10
+Filière Psy, age 10
+Filière Psy, age 10
+Filière Psy, age 10
+Filière Psy, age 10
+Filière Psy, age 10
+Filière Psy, age 10
+Filière Psy, age 10
+Filière Psy, age 10
+Filière Psy, age 10
+Filière Psy, age 10
+Filière Psy, age 10
+Filière Psy, age 10
+Filière Psy, age 10
+Filière Psy, age 10
+Filière Psy, age 10
+Filière Psy, age 10
+Filière Psy, age 10
+Filière Psy, age 10
+Filière Psy, age 10
+Filière Psy, age 10
+Filière Psy, age 10
+Filière Droit, age 20
+Filière Droit, age 20
+Temps de réponse;1631.0052871704102;correct;True;digits;[5, 5, 8, 2];congruence;False;
+Temps de réponse;1712.040901184082;correct;True;digits;[5, 1, 5, 2];congruence;False;
+Temps de réponse;636.8808746337891;correct;True;digits;[2, 6, 9, 3];congruence;True;
+Temps de réponse;731.3239574432373;correct;True;digits;[3, 4, 9, 1];congruence;True;
+Temps de réponse;1058.3469867706299;correct;True;digits;[7, 4, 1, 9];congruence;True;
+Temps de réponse;902.8620719909668;correct;False;digits;[4, 3, 4, 5];congruence;False;
+Temps de réponse;1099.970817565918;correct;False;digits;[4, 8, 4, 9];congruence;False;
+Temps de réponse;1104.6252250671387;correct;True;digits;[1, 4, 1, 6];congruence;False;
+Temps de réponse;950.6409168243408;correct;True;digits;[1, 6, 8, 4];congruence;True;
+Temps de réponse;778.4199714660645;correct;True;digits;[6, 1, 5, 1];congruence;True;
+Filière Eco, age 20
+Temps de réponse;1592.4410820007324;correct;True;digits;[7, 7, 9, 2];congruence;False;
+Temps de réponse;745.2249526977539;correct;True;digits;[2, 4, 9, 2];congruence;True;
+Temps de réponse;879.335880279541;correct;False;digits;[3, 4, 4, 6];congruence;False;
+Temps de réponse;1207.5247764587402;correct;True;digits;[4, 7, 9, 2];congruence;False;
+Temps de réponse;814.2168521881104;correct;True;digits;[6, 1, 8, 5];congruence;False;
+Temps de réponse;736.5889549255371;correct;True;digits;[5, 7, 7, 7];congruence;True;
+Temps de réponse;847.3548889160156;correct;False;digits;[5, 9, 7, 3];congruence;False;
+Temps de réponse;822.3669528961182;correct;True;digits;[6, 8, 8, 9];congruence;True;
+Temps de réponse;1037.445068359375;correct;True;digits;[1, 4, 1, 7];congruence;False;
+Temps de réponse;1071.3353157043457;correct;True;digits;[6, 4, 1, 9];congruence;False;

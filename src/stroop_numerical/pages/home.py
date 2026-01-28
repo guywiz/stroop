@@ -4,7 +4,7 @@ from dash import html, dcc, Input, Output, State, no_update
 dash.register_page(
     __name__,
     path="/",
-    title="Accueil – Stroop numérique (fractions)"
+    title="Accueil – Stroop spatial"
 )
 
 layout = html.Div(
@@ -15,10 +15,10 @@ layout = html.Div(
         "lineHeight": "1.6",
     },
     children=[
-        html.H1("Expérience de Stroop numérique (fractions)"),
+        html.H1("Expérience de Stroop numérique"),
 
-        html.P("En appuyant sur la barre d'espace, deux fractions seront affichées à l'écran."),
-        html.P('Votre tâche consiste à indiquer la fraction (celle située à gauche, ou celle située à droite) est la plus grande.'),
+        html.P("En appuyant sur la barre d'espace, deux nombres seront affichés à l'écran."),
+        html.P('Votre tâche consiste à indiquer le nombre (celui situé à gauche, ou celui situé à droite) est le plus grand.'),
         html.P('Il vous faut réagir le plus rapidement possible, "sans réfléchir".'),
         html.P('Pour cela, utilisez la touche "F" pour indiquer "Gauche" et la touche "J" pour indiquer "Droite".'),
 
