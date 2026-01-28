@@ -2,9 +2,9 @@
 
 Ce dépôt contient un code minimaliste permettant de reproduire une expérience attestant de l'[*effet de Stroop*](https://fr.wikipedia.org/wiki/Effet_Stroop).
 
-L'effet consiste à soumettre à un utilisateur deux stimulis, typiquement un mot et une couleur (d'encre utilisée pour afficher le mot), et à demander à l'utilisateur d'indiquer la couleur utilisée pour afficher le mot.
+L'expérience classique soumet de manière répétée un utilisateur à une stimulus: un mot et une couleur (d'encre utilisée pour afficher le mot). La tâche de l'utilisateur consiste à demander à l'utilisateur d'indiquer la couleur utilisée pour afficher le mot.
 
-Les stimulis peuvent être *congruents* (le mot affiché est celui de la couleur utilisée pour l'afficher) ou *incongruents* (le mot indique une couleur différente de celle utilisée pour l'afficher).
+Les stimulis peuvent être *congruents* (le mot affiché est celui de la couleur utilisée pour l'afficher) ou *incongruents* (le mot indique une couleur différente de celle utilisée pour l'afficher). On peut imaginer des variantes de cet expérience. Ce dépôt propose certaines variantes.
 
 ([repris de Wikipedia](https://fr.wikipedia.org/wiki/Effet_Stroop))
 """... le temps de réaction — en d'autres termes le temps nécessaire à la dénomination de la couleur avec laquelle le mot est écrit — est beaucoup plus long lorsque le mot est incongruent (le mot « bleu » écrit en rouge) que lorsque le mot est congruent (le mot « rouge » écrit en rouge) ou neutre (le mot « lion » écrit en rouge).
@@ -14,11 +14,13 @@ Le pourcentage d'erreurs (dire bleu lorsque le mot « bleu » est écrit en roug
 
 ## Expérience de Stroop
 
-Le code implémente pour l'instant une application web très simple:
+Le code implémente des variantes de l'expérience de Stroop. Chaque variante a un code qui lui est propre, dans un dossier dédié. L'expérience se déroule à l'aide d'une application web très simple:
 
-- L'utilisateur clique et obtient l'affichage d'un mot,
-- Il clique ensuite sur un bouton indiquant la couleur du mot,
-- Le temps écoulé entre l'affichage et le second clic est mesuré et stocké dans un fichier local.
+- L'utilisateur clique et obtient l'affichage d'un stimulus (un mot, par exemple),
+- Il clique ensuite sur un bouton (indiquant la couleur du mot), ou tape sur une touche du clavier.
+- Le temps écoulé entre l'affichage et l'action de l'utilisateur est mesuré et stocké dans un fichier local.
+
+En amont de l'expérience, l'utilisateur renseigne son profil (age, filière de formation, etc.), ce qui permet éventuellement d'nalyser les résultats en fonction des profils.
 
 ### Installer et utiliser l'application
 
@@ -26,31 +28,72 @@ L'application utilise le [framework `dash`](https://dash.plotly.com/).
 
 Il est recommandé de créer un environnement dédié sous python 3.10 (par exemple).
 
-`conda create -n stroop python==3.10`
+#### Création d'un environnement à l'aide de `venv`
 
-ou avec `venv`, au choix.
+([Repris de la documentation officielle de W3Schools](https://www.w3schools.com/python/python_virtualenv.asp))
 
-Le fichier `requirements.txt` contient les dépendances (seule dash est incluse, qui déclenche l'installation d'un tas de librairies annexes nécessaires à `dash`).
+Typiquement à l'aide d'un terminal (console de commande), un dossier `my_env` sera créé pour stocker les informations propres à l'environnement (il faut se souvenir où se trouve ce dossier (*`<path_to>`*`/myenv`, par exemple `C:\Program Files\...\my_env` sous Windows, ou `/Users/username/Documents/.../my_env` sous OX S, etc.).
+
+1) L'environnement créé s'appuie sur une version de `python` déjà installée sur ma machine hôte. Nous allons supposer que `python 3.x` est disponible et qu'il est accessible via la commande `python3`.
+
+Ainsi, on peut créer un environnement ) l'aide de la commande:
+
+`python3 -m venv` *`<path_to>`*`/myenv`
+
+(par exemple `python3 -m venv C:\Program Files\...\my_env`, `python3 -m venv /Users/username/Documents/.../my_env`)
+
+2) On active l'environnement en faisant, depuis l'endroit où se trouve l'environnement:
+
+`./<path_to>/myenv/bin/activate`
+
+Le prompt du terminal affiche alors le nom de l'environneemnt en préfixe, indiquant que l'environnement est bien activé.
+
+`(my_env) >`
+
+3) On peut ensuite se déplacer dans le dosier du projet et installer les libraries requises en faisant, par exemple:
+
+`(my_env) > pip install -r requirements.txt`
+
+En ce qui nous concerne, le fichier `requirements.txt` contient les dépendances de l'application (à d'autres librairies qu'il est nécessaire d'installer).
+
+#### Création d'un environnement à l'aide de `venv`
+
+La création d'un environneemnt avec `conda` est trsè similaire, et nécessite de l'avoir installé au préalable, souvent en installant l'[application Anaconda](https://www.anaconda.com/download) (avec une interface graphique, et un accès à un ensemble d'autres applications).
+
+A la différence de `venv`, conda installe les informations des environnnements dans un dossier qui lui est propre (nul besoin de se remémorer là où l'environnement est installé).
+
+`conda create -n my_env python==3.10`
+
+qui précise aussi la version de python à utiliser (si on omet ce paramètre, la dernière version est installée).
+
+On active l'environnement à l'aide de la commande (exécutée dans un terminal):
+
+`conda activate my_env`
+
+ON procède à l'installa tion de librairies externes soit à l'aide de la commande:
+
+`pip install -r requirements.txt`
+
+(on peut aussi utiliser `conda install <library_name>`).
+
+### Lancer l'application
 
 Puis reste à lancer l'application depuis un terminal, et depuis le répertoire où se trouve le code source.
 
-Le dépôt contient deux applications, qui correspondent à deux variantes de l'expérience de Stroop.
+Le code source des applications se trouve dan sle dossier `src`. Celui-ci contient un dossier pour chaque variante de l'expérience de Stroop.
 
-- La première expérience correspond à l'exemple classique. Il suffit dans ce cas de lancer le script:
+Nous allons supposer que vous avez téléchargé l'un de ces dossiers (la varianet que vous allez étudiée).
 
-`> python stroop.py`
+Il suffit alors de se placer au niveau du fichier `app.py` et de le lancer:
 
-La seconde variante, ***Stroop spatial***,  affiche à l'écran le mot "Gauche" ou "Droite" et l'utilisateur doit indiquer si celui-ci se trouve à gauche (en cliquant la touche "F") ou à droite (en cliquant la touche "J"). Le script est logé dans le dossier `stroop_left_right`, et se lance avec la commande:
+`> python app.py`
 
-`> python app_stroop_left_right.py`
-
-Cette seconde version permet aussi de récolter des informations sur l'utilisateur, et affiche une page de fin.
 
 avant de visualiser l'application dans le navigateur à l'URL:
 
 `http://127.0.0.1:8050/`.
 
-Les résultats de l'expérience sont pour l'instant ajoutés à un fichier `/src/tmp.txt` (qui est créé au départ et auxquels toutes les mesures subséquentes s'jaoutent ensuite).
+Les résultats de l'expérience sont ajoutés à un fichier `results.txt` (qui est créé au départ et auxquels toutes les mesures subséquentes s'jaoutent ensuite).
 
 ## Méthodologie
 
