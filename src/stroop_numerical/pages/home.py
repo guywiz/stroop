@@ -4,7 +4,7 @@ from dash import html, dcc, Input, Output, State, no_update
 dash.register_page(
     __name__,
     path="/",
-    title="Accueil – Stroop spatial"
+    title="Accueil – Stroop numérique"
 )
 
 layout = html.Div(

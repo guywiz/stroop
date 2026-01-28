@@ -4,7 +4,7 @@ from dash import html, dcc, Input, Output, State, no_update
 dash.register_page(
     __name__,
     path="/goodbye",
-    title="Stroop numérique (fractions) - conclusion"
+    title="Stroop numérique - conclusion"
 )
 
 layout = html.Div(
@@ -15,7 +15,7 @@ layout = html.Div(
         "lineHeight": "1.6",
     },
     children=[
-        html.H1("Expérience de Stroop numérique (fractions)"),
+        html.H1("Expérience de Stroop numérique"),
 
         html.P("L'équipe vous remercie du temps accordé à cette expérience."),
 
