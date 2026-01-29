@@ -34,7 +34,7 @@ layout = html.Div(
             style={"width": "100%", "marginBottom": "20px"},
         ),
 
-        html.Label("Filière de formation"),
+        html.Label("Filière de formation (discipline)"),
         dcc.Input(
             id="field-input",
             type="text",
@@ -57,7 +57,6 @@ layout = html.Div(
         dcc.Location(id="redirect"),
     ]
 )
-
 
 @dash.callback(
     Output("subject-info", "data"),
