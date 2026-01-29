@@ -14,12 +14,12 @@ layout = html.Div(
         "fontFamily": "Arial",
     },
     children=[
-        html.H1("Expérience de Stroop numérique (fractions)"),
+        html.H1("Expérience de Stroop numérique (bis)"),
 
-        html.P("En appuyant sur la barre d'espace, deux fractions seront affichées à l'écran."),
-        html.P('Votre tâche consiste à indiquer la fraction (celle située à gauche, ou celle située à droite) est la plus grande.'),
+        html.P("En appuyant sur la barre d'espace, un nombre est affiché à l'écran."),
+        html.P("Votre tâche consiste à indiquer le nombre de chiffres qu'il comporte."),
         html.P('Il vous faut réagir le plus rapidement possible, "sans réfléchir".'),
-        html.P('Pour cela, utilisez la touche "F" pour indiquer "Gauche" et la touche "J" pour indiquer "Droite".'),
+        html.P('Pour cela, utilisez les touches "1" à "9" pour répondre.'),
 
         html.H3("Informations participant"),
         html.P("Avant de commencer l'expérience, merci de renseigner quelques informations vous concernant."),
