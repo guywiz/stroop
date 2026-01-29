@@ -12,7 +12,6 @@ layout = html.Div(
         "maxWidth": "700px",
         "margin": "80px auto",
         "fontFamily": "Arial",
-        "lineHeight": "1.6",
     },
     children=[
         html.H1("Expérience de Stroop numérique (fractions)"),
