@@ -50,7 +50,13 @@ layout = [html.Div(
 
         html.Div(
             id="stimulus",
-            #children="Appuyez sur ESPACE pour commencer",
+            style={
+                "width": "100vw",
+                "alignItems": "center",
+                "justifyContent": "center",
+                #"height": "100vh",
+                "display": "flex",
+            },
             children=dbc.Row(
                 [
                     dbc.Col(html.Div(id="Gauche", children="Appuyer sur", style=style_gauche), width=4),
@@ -58,10 +64,6 @@ layout = [html.Div(
                     dbc.Col(html.Div(id="Droite", children="pour continuer", style=style_droite), width=4),
                 ]
             ),
-            #children=[
-            #    html.Div(id="Gauche", style={"fontSize": "40px"}, children="Appuyez sur ESPACE pour commencer"),
-            #    html.Div(id="Droite", style={"fontSize": "40px"}, children=""),
-            #],
         ),
 
         html.Div(
@@ -91,10 +93,10 @@ layout = [html.Div(
 def new_trial():
     a = random.choice(range(100, 10000))
     b = random.choice(range(100, 10000))
-    fontsize_a = random.choice(range(4,40))
-    fontsize_b = random.choice(range(4,40))
+    fontsize_a = random.choice(range(2,60))
+    fontsize_b = random.choice(range(2,60))
     while (a == b):
-        b = random.choice(range(4,40))
+        b = random.choice(range(2,60))
     congruent = ((a < b) and (fontsize_a < fontsize_b)) or ((a > b) and (fontsize_a > fontsize_b))
     return a, b, fontsize_a, fontsize_b, congruent
 
@@ -155,7 +157,6 @@ def handle_keypress(value, trial, start_time):
             fp.write(f"Temps de réponse;{rt};correct;{correct};numbers;{trial['numbers']};fontsize;{trial['fontsize']};congruence;{trial['congruent']};\n")
 
         return (
-            #trial["word"],
             "",
             style_gauche,
             "",
@@ -163,10 +164,7 @@ def handle_keypress(value, trial, start_time):
             style_droite,
             trial,
             start_time,
-            f"{'✔️' if correct else '❌'} "
-            f"Temps de réaction : {rt:.0f} ms — "
-            f"{'Congruent' if trial['congruent'] else 'Incongruent'} "
-            f"(Espace pour recommencer)",
+            f"Appuyez sur la barre d'espace pour poursuivre",
             " "
         )
 
@@ -179,6 +177,6 @@ def handle_keypress(value, trial, start_time):
 def redirect_when_done(trial):
     global nb_trials
     print(f"Input trial: {trial}\n")
-    if trial and trial[0]["nb_trial"] > nb_trials:
+    if trial and trial["nb_trial"] > nb_trials:
         return "/goodbye"
     return no_update

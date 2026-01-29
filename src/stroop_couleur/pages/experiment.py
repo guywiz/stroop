@@ -44,27 +44,6 @@ layout = html.Div(
     ]
 )
 
-'''
-# Affichage d'un nouveau mot Stroop
-@dash.callback(
-    Output("stroop-word", "children"),
-    Output("stroop-word", "style"),
-    Output("trial-data", "data"),
-    Output("start-time", "data"),
-    Input("new-word", "n_clicks"),
-    prevent_initial_call=True
-)
-def new_word(_):
-    global displayed_word, displayed_color, start_time
-
-    displayed_word = random.choice(list(COLORS.keys()))
-    displayed_color = random.choice(list(COLORS.values()))
-    trial_data = {"word": displayed_word, "color": displayed_color, "congruent": displayed_color == COLORS[displayed_word], "nb_trial": (trial["nb_trial"] + 1) if trial else 1},
-    start_time = time.time()
-
-    return displayed_word, {"color": displayed_color, "fontSize": "48px"}, trial_data, start_time
-'''
-
 # Réception d’un clic d’un bouton couleur ou "Nouveau mot"
 @dash.callback(
     Output("stroop-word", "children"),
@@ -82,9 +61,6 @@ def handle_event(color1, color2, color3, color4, current_res, trial, start_time)
 
     if not ctx.triggered:
         raise PreventUpdate
-
-    #trial = ctx.states["trial-data.data"]
-    #start_time = ctx.states["start-time.data"]
 
     trigger = ctx.triggered_id
 
@@ -110,7 +86,6 @@ def handle_event(color1, color2, color3, color4, current_res, trial, start_time)
             fp.write(f"Temps de réponse;{rt};correct;{correct};displayed_word;{trial[0]['displayed_word']};displayed_color;{displayed_color};congruence;{trial[0]['congruent']};\n")
 
         return "", {}, trial, start_time
-
 
 @dash.callback(
     Output("redirect_goodbye", "pathname"),

@@ -143,10 +143,7 @@ def handle_keypress(value, trial, start_time):
             style,
             trial,
             start_time,
-            f"{'✔️' if correct else '❌'} "
-            f"Temps de réaction : {rt:.0f} ms — "
-            f"{'Congruent' if trial['congruent'] else 'Incongruent'} "
-            f"(Espace pour recommencer)",
+            f"Appuyez sur la barre d'espace pour poursuivre",
             " "
         )
 
@@ -159,6 +156,6 @@ def handle_keypress(value, trial, start_time):
 def redirect_when_done(trial):
     global nb_trials
     print(f"Input trial: {trial}\n")
-    if trial and trial[0]["nb_trial"] > nb_trials:
+    if trial and trial["nb_trial"] > nb_trials:
         return "/goodbye"
     return no_update

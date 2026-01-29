@@ -8,7 +8,7 @@ from dash.exceptions import PreventUpdate
 dash.register_page(
     __name__,
     path="/experiment",
-    title="Expérience – Stroop numérique"
+    title="Expérience – Stroop numérique (fraction)"
 )
 
 nb_trials = 10
@@ -18,19 +18,16 @@ POSITIONS = ["left", "right"]
 style_gauche={
     "fontSize": "64px",
     "color": "gray",
-    #"position": "absolute",
     "textAlign": "left"
 }
 style_center={
     "fontSize": "64px",
     "color": "gray",
-    #"position": "absolute",
     "textAlign": "center"
 }
 style_droite={
     "fontSize": "64px",
     "color": "gray",
-    #"position": "absolute",
     "textAlign": "right"
 }
 
@@ -38,7 +35,7 @@ layout = [html.Div(
     id="container",
     tabIndex="0",  # IMPORTANT : permet de capter le clavier
     style={
-        #"width": "100vw",
+        "width": "100vw",
         "height": "100vh",
         "display": "flex",
         "alignItems": "center",
@@ -60,10 +57,6 @@ layout = [html.Div(
                     dbc.Col(html.Div(id="Droite", children="pour continuer", style=style_droite), width=4),
                 ]
             ),
-            #children=[
-            #    html.Div(id="Gauche", style={"fontSize": "40px"}, children="Appuyez sur ESPACE pour commencer"),
-            #    html.Div(id="Droite", style={"fontSize": "40px"}, children=""),
-            #],
         ),
 
         html.Div(
@@ -149,17 +142,12 @@ def handle_keypress(value, trial, start_time):
             fp.write(f"Temps de réponse;{rt};correct;{correct};digits;{trial['digits']};congruence;{trial['congruent']};\n")
 
         return (
-            #trial["word"],
             "",
             "",
             "",
-            #no_update,
             trial,
             start_time,
-            f"{'✔️' if correct else '❌'} "
-            f"Temps de réaction : {rt:.0f} ms — "
-            f"{'Congruent' if trial['congruent'] else 'Incongruent'} "
-            f"(Espace pour recommencer)",
+            f"Appuyez sur la barre d'espace pour poursuivre",
             " "
         )
 
@@ -172,6 +160,6 @@ def handle_keypress(value, trial, start_time):
 def redirect_when_done(trial):
     global nb_trials
     print(f"Input trial: {trial}\n")
-    if trial and trial[0]["nb_trial"] > nb_trials:
+    if trial and trial["nb_trial"] > nb_trials:
         return "/goodbye"
     return no_update

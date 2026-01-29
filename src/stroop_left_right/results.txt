@@ -1,0 +1,21 @@
+Filière Psy, age 10
+Temps de réponse;1646.2888717651367;correct;True;word;DROITE;position;right;congruence;False;
+Temps de réponse;830.5737972259521;correct;True;word;Gauche;position;left;congruence;True;
+Temps de réponse;803.8170337677002;correct;False;word;Gauche;position;right;congruence;False;
+Temps de réponse;727.2560596466064;correct;False;word;Gauche;position;right;congruence;False;
+Temps de réponse;869.999885559082;correct;True;word;GAUCHE;position;left;congruence;False;
+Filière Eco, age 20
+Temps de réponse;1235.8593940734863;correct;True;word;Gauche;position;right;congruence;False;
+Temps de réponse;877.7580261230469;correct;False;word;DROITE;position;right;congruence;False;
+Filière Eco, age 20
+Temps de réponse;687.6661777496338;correct;True;word;DROITE;position;right;congruence;False;
+Temps de réponse;504.99796867370605;correct;True;word;Droite;position;right;congruence;True;
+Temps de réponse;499.0580081939697;correct;True;word;Gauche;position;left;congruence;True;
+Temps de réponse;553.6677837371826;correct;True;word;DROITE;position;left;congruence;False;
+Temps de réponse;599.0688800811768;correct;True;word;DROITE;position;right;congruence;False;
+Temps de réponse;424.4868755340576;correct;True;word;Droite;position;right;congruence;True;
+Temps de réponse;506.64591789245605;correct;True;word;GAUCHE;position;left;congruence;False;
+Temps de réponse;475.2466678619385;correct;True;word;DROITE;position;left;congruence;False;
+Temps de réponse;2033.9038372039795;correct;False;word;Gauche;position;right;congruence;False;
+Temps de réponse;521.6848850250244;correct;True;word;Droite;position;right;congruence;True;
+Temps de réponse;2094.3288803100586;correct;True;word;GAUCHE;position;right;congruence;False;
