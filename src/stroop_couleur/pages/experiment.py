@@ -12,6 +12,8 @@ dash.register_page(
 )
 
 # Couleurs et mapping Dash (HTML)
+nb_trials = 10
+
 COLORS = {
     "Rouge": "red",
     "Vert": "green",
@@ -115,7 +117,8 @@ def handle_event(color1, color2, color3, color4, current_res, trial, start_time)
     Input("trial-data", "data"),
 )
 def redirect_when_done(trial):
+    global nb_trials
     print(f"Input trial: {trial}\n")
-    if trial and trial[0]["nb_trial"] > 10:
+    if trial and trial[0]["nb_trial"] > nb_trials:
         return "/goodbye"
     return no_update

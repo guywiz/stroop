@@ -11,6 +11,8 @@ dash.register_page(
     title="Expérience – Stroop numérique"
 )
 
+nb_trials = 10
+
 style_gauche={
     "fontSize": "64px",
     "color": "gray",
@@ -175,6 +177,8 @@ def handle_keypress(value, trial, start_time):
     Input("trial-data", "data"),
 )
 def redirect_when_done(trial):
-    if trial and trial["nb_trial"] > 10:
+    global nb_trials
+    print(f"Input trial: {trial}\n")
+    if trial and trial[0]["nb_trial"] > nb_trials:
         return "/goodbye"
     return no_update

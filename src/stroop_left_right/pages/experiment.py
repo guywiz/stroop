@@ -10,6 +10,8 @@ dash.register_page(
     title="Expérience – Stroop spatial"
 )
 
+nb_trials = 10
+
 WORDS = ["Gauche", "Droite", "GAUCHE", "DROITE"]
 POSITIONS = ["left", "right"]
 
@@ -155,6 +157,8 @@ def handle_keypress(value, trial, start_time):
     Input("trial-data", "data"),
 )
 def redirect_when_done(trial):
-    if trial and trial["nb_trial"] > 10:
+    global nb_trials
+    print(f"Input trial: {trial}\n")
+    if trial and trial[0]["nb_trial"] > nb_trials:
         return "/goodbye"
     return no_update
