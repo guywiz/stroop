@@ -1,6 +1,4 @@
----
-lang: fr
----
+<!-- lang: fr -->
 
 # Stroop
 
