@@ -159,7 +159,6 @@ def handle_keypress(value, trial, start_time):
 )
 def redirect_when_done(trial):
     global nb_trials
-    print(f"Input trial: {trial}\n")
     if trial and trial["nb_trial"] > nb_trials:
         return "/goodbye"
     return no_update
