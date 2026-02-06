@@ -1,6 +1,6 @@
 <!-- lang: fr -->
 
-# Stroop
+# Stroop "numérique"
 
 Ce dépôt contient un code minimaliste permettant de reproduire l'expérience classique attestant de l'[*effet de Stroop*](https://fr.wikipedia.org/wiki/Effet_Stroop) dans une variante qui mérite d'être examinée.
 
