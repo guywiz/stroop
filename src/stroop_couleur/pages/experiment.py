@@ -67,8 +67,6 @@ def handle_event(color1, color2, color3, color4, current_res, trial, start_time)
     trigger = ctx.triggered_id
 
     if trigger == "new-word":
-        print(f"Triggered by new word\n")
-        print(f"Received trial: {trial}\n")
         displayed_word = random.choice(list(COLORS.keys()))
         displayed_color = random.choice(list(COLORS.values()))
         trial_data = (
@@ -89,8 +87,6 @@ def handle_event(color1, color2, color3, color4, current_res, trial, start_time)
         )
 
     elif trigger in [f"btn-{c}" for c in COLORS.keys()]:
-        print(f"Triggered by new color {trigger}\n")
-        print(f"Received trial: {trial}\n")
         rt = (time.time() - start_time) * 1000  # en ms
         clicked_button = trigger.split("-")[1]
         displayed_color = trial[0]["color"]
@@ -110,7 +106,6 @@ def handle_event(color1, color2, color3, color4, current_res, trial, start_time)
 )
 def redirect_when_done(trial):
     global nb_trials
-    print(f"Input trial: {trial}\n")
     if trial and trial[0]["nb_trial"] > nb_trials:
         return "/goodbye"
     return no_update

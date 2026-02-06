@@ -30,13 +30,13 @@ En amont de l'expérience, l'utilisateur renseigne son profil (âge, filière de
 
 L'application utilise le [framework `dash`](https://dash.plotly.com/).
 
-Il est recommandé de créer un environnement dédié sous python 3.10 (par exemple).
+Il est recommandé, voire *indispensable*, de créer un environnement dédié sous python 3.10 (par exemple).
 
 #### Création d'un environnement à l'aide de `venv`
 
 ([Repris de la documentation officielle de W3Schools](https://www.w3schools.com/python/python_virtualenv.asp))
 
-Typiquement à l'aide d'un terminal (console de commande), un dossier `my_env` sera créé pour stocker les informations propres à l'environnement (il faut se souvenir où se trouve ce dossier *`<path_to>`*`/myenv`, par exemple `C:\Program Files\...\my_env` sous Windows, ou `/Users/username/Documents/.../my_env` sous OX S, etc.).
+Typiquement à l'aide d'un terminal (console de commande), un dossier `my_env` (c'est un exemple, vous pouvez appelé votre environnnement comme vous voulez, `stroop`, ou `pydash`, ...) sera créé pour stocker les informations propres à l'environnement (il faut se souvenir où se trouve ce dossier *`<path_to>`*`/myenv`, par exemple `C:\Program Files\...\my_env` sous Windows, ou `/Users/username/Documents/.../my_env` sous OS X (Mac), etc.).
 
 1) L'environnement créé s'appuie sur une version de `python` déjà installée sur ma machine hôte. Nous allons supposer que `python 3.x` est disponible et qu'il est accessible via la commande `python3`.
 
@@ -48,21 +48,24 @@ Ainsi, on peut créer un environnement à l'aide de la commande :
 
 2) On active l'environnement en faisant, depuis l'endroit où se trouve l'environnement :
 
-`./<path_to>/myenv/bin/activate`
-ou
 `source <path_to>/myenv/bin/activate`
+
+ou
+
+`./<path_to>/myenv/bin/activate`
+
 
 Le prompt du terminal affiche alors le nom de l'environnement en préfixe, indiquant que l'environnement est bien activé.
 
 `(my_env) >`
 
-1) On peut ensuite se déplacer dans le dossier du projet et installer les librairies requises en faisant, par exemple :
+3) On peut ensuite se déplacer dans le dossier du projet et installer les librairies requises en faisant, par exemple :
 
 `(my_env) > pip install -r requirements.txt`
 
 En ce qui nous concerne, le fichier `requirements.txt` contient les dépendances de l'application (à d'autres librairies qu'il est nécessaire d'installer).
 
-#### Création d'un environnement à l'aide de `venv`
+#### Création d'un environnement à l'aide de `conda`
 
 La création d'un environnement avec `conda` est très similaire, et nécessite de l'avoir installé au préalable, souvent en installant l'[application Anaconda](https://www.anaconda.com/download) (avec une interface graphique, et un accès à un ensemble d'autres applications).
 
@@ -80,7 +83,7 @@ On procède à l'installation de librairies externes soit à l'aide de la comman
 
 `pip install -r requirements.txt`
 
-(on peut aussi utiliser `conda install <library_name>`).
+(on peut aussi utiliser `conda install <library_name>` pou rinstalle rune librairie en particulier ou `conda install --file requirements.txt` pour installer les librairies toutes à la fois).
 
 ### Lancer l'application
 
@@ -184,12 +187,7 @@ Or, la distribution de ce $t$-score n'est plus une distribution normale et on do
 On peut penser quand dans certains cas, les équipes auront suivi des raccourcis par manque de temps, par exemple :
 
 - Dans le cas d'un échantillon mal formé, il peut être intéressant de discuter de la validité de l'expérience ou des conclusions qui sont tirées. Pensons par exemple à des étudiants qui, à la bourre, décide de se prêter eux-mêmes à l'expérience à plusieurs reprises, ou encore de soumettre un même participant à l'expérience plusieurs fois, introduisant un biais d'apprentissage ...
-- Dans le cas de données erronées (mauvais déroulé de l'expérience à cause de mauvaise condition, disons), données bruitées, nécessité de filtrer, etc.
+- Dans le cas de données erronées (mauvais déroulé de l'expérience à cause de mauvaises conditions, disons), données bruitées, nécessité de filtrer, etc.
 - ...
 
-### Variantes
-
-On peut aller vers des variantes de l'expérience
-
-- Plutôt que l'incongruence sur la couleur, on peut jouer sur le positionnement gauche-droite (gauche affiché à gauche ou ... droite)
-- À suivre
+Dans tous les cas, il sera important de restituer honnêtement les conditions de réalisation de l'expérience (il en va de sa valeur scientifique !)
