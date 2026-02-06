@@ -1,6 +1,6 @@
 <!-- lang: fr -->
 
-# Stroop "classique"
+# Expérience de Stroop
 
 Ce dépôt contient un code minimaliste permettant de reproduire une expérience attestant de l'[*effet de Stroop*](https://fr.wikipedia.org/wiki/Effet_Stroop).
 
@@ -16,7 +16,7 @@ Cette expérience montre que :([repris de Wikipédia](https://fr.wikipedia.org/w
 
 On peut imaginer des variantes de cette expérience. Ce dépôt propose certaines variantes.
 
-## Expérience de Stroop
+## Une plateforme simple pour mener l'expérience de Stroop
 
 Le code implémente des variantes de l'expérience de Stroop. Chaque variante a un code qui lui est propre, dans un dossier dédié. L'expérience se déroule à l'aide d'une application web très simple :
 
