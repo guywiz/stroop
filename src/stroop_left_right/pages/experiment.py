@@ -122,7 +122,6 @@ def handle_keypress(value, trial, start_time):
             "F = gauche | J = droite",
             " "
         )
-        print(f"Returning:\n{machin}\n")
         return machin
 
     # Réponse F ou J
@@ -130,8 +129,6 @@ def handle_keypress(value, trial, start_time):
         rt = (time.time() - start_time) * 1000
         response = "left" if key == "f" else "right"
         correct = response == trial["position"]
-
-        print(f"Trial data {trial}\n")
 
         with open("./results.txt", "a") as fp:
             fp.write(f"Temps de réponse;{rt};correct;{correct};word;{trial['word']};position;{trial['position']};congruence;{trial['congruent']};\n")
@@ -155,7 +152,6 @@ def handle_keypress(value, trial, start_time):
 )
 def redirect_when_done(trial):
     global nb_trials
-    print(f"Input trial: {trial}\n")
     if trial and trial["nb_trial"] > nb_trials:
         return "/goodbye"
     return no_update
