@@ -130,7 +130,6 @@ def handle_keypress(value, trial, start_time):
     if key == " ":
         a, b, fontsize_a, fontsize_b, congruent = new_trial()
         style_gauche["font-size"] = fontsize_a * 5
-        print(f"Style gauche {style_gauche}")
         style_droite["font-size"] = fontsize_b * 5
         machin = (
             f"{a}",
@@ -176,7 +175,6 @@ def handle_keypress(value, trial, start_time):
 )
 def redirect_when_done(trial):
     global nb_trials
-    print(f"Input trial: {trial}\n")
     if trial and trial["nb_trial"] > nb_trials:
         return "/goodbye"
     return no_update
